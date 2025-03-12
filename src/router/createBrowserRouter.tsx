@@ -8,7 +8,7 @@ const Page3 = () =>  <div>Page3</div>;
 const Page4 = () =>  <div>Page4</div>;
 import NotFoundPage from "../pages/NotFoundPage";
 
-const Router= () => {
+const Router = () => {
   const router = createBrowserRouter([
     {
       path: "/",
