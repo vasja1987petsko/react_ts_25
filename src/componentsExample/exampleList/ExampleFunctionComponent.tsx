@@ -2,12 +2,12 @@ import React, { useEffect, useState} from "react";
 
 const ExampleFunctionComponent = () => {
 
-    const [count, setCount ] = useState(0);
+    const [count, setCount ] = useState<number>(0);
 
     useEffect(() => {
         // Runs on the first render
         // And any time any dependency value changes
-        console.log('useEffect cont', count);
+        console.log('useEffect count', count);
         document.title = `кількість кліків ${count}`;
         return function (){
             console.log('Effect Cleanup (similar as componentWillUnmount for classComponent)', count);
@@ -20,7 +20,7 @@ const ExampleFunctionComponent = () => {
 
     useEffect(() => {
         console.log('Runs on every render');
-    }, []);
+    });
 
     const increase = () => {
         setCount(count + 1);

@@ -4,7 +4,7 @@ interface IState {
     count: number;
 }
 
-class ExampleClassComponent extends Component<any, any> {
+class ExampleClassComponent extends Component<any, IState> {
     // constructor(props: any) {
     //     console.log('constructor');
     //     super(props);
@@ -28,7 +28,7 @@ class ExampleClassComponent extends Component<any, any> {
         console.log('props:', this.props);
         console.log('nextState', nextState);
         console.log('state:', this.state);
-        return true
+        return true;
     }
 
     getSnapshotBeforeUpdate(prevProps: Readonly<any>, prevState: Readonly<IState>): any {
@@ -50,7 +50,6 @@ class ExampleClassComponent extends Component<any, any> {
     componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
         console.log(Error)
     }
-
 
     componentWillUnmount() {
         console.log('componentWillUnmount');
