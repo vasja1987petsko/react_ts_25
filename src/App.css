@@ -4,3 +4,7 @@
   padding: 2rem;
   text-align: center;
 }
+button {
+  background-color: transparent;
+  border: solid 1px blue;
+}

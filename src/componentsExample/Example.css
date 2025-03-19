@@ -1,0 +1,9 @@
+.example .menu a {
+  padding: 15px;
+}
+.example .menu a {
+  color: green;
+}
+.example .menu a:hover {
+  color: red;
+}
