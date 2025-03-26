@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "./Example.css";
+import UserListMemoComponent from "./exampleList/memo/UserListMemoComponent.tsx";
 
 const HeaderExample = () => {
     return(
@@ -12,6 +13,9 @@ const HeaderExample = () => {
         }}>
           <Link to={'example-function-component'}> ExampleFunctionComponent </Link>
           <Link to={'example-class-component'}> ExampleClassComponent </Link>
+          <Link to={'user-list-function-component'}> UserListClassComponent </Link>
+          <Link to={'user-list-class-component'}> UserListFunctionComponent </Link>
+          <Link to={'user-list-memo-component'}> UserListMemoComponent </Link>
           <Link to={'1'}> example1</Link>
           <Link to={'2'}> example2 </Link>
         </div>
