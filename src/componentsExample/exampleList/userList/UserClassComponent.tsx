@@ -1,4 +1,4 @@
-import { Component } from "react";
+import { PureComponent } from "react";
 import { IUser } from "../../../interfaces/example/users";
 
 interface IState {
@@ -12,7 +12,7 @@ interface IProps {
     changeMessage: (message: string) => void;
 }
 
-class UserClassComponent extends Component<IProps, IState> {
+class UserClassComponent extends PureComponent<IProps, IState> {
     // static getDerivedStateFromProps(props: IProps, state: IState) {
     //     console.log('getDerivedStateFromProps');
     //     console.log('state:', state);
@@ -29,7 +29,7 @@ class UserClassComponent extends Component<IProps, IState> {
     // }
 
     constructor(props: IProps) {
-        console.log('constructor');
+        console.log('constructor UserClassComponent');
         super(props);
         this.state = {
             count: 0,
@@ -42,6 +42,14 @@ class UserClassComponent extends Component<IProps, IState> {
     //     console.log('componentDidmount');
     //     console.log('state:', this.state);
     //     console.log('props:', this.props);
+    // }
+    // shouldComponentUpdate(nextProps: Readonly<any>, nextState: Readonly<IState>, nextContext: any): boolean {
+    //   console.log('shouldComponentUpdate');
+    //   console.log(' nextProps:',  nextProps);
+    //   console.log('props:', this.props);
+    //   console.log('nextState', nextState);
+    //   console.log('state:', this.state);
+    //   return true;
     // }
     //
     // getSnapshotBeforeUpdate(prevProps: Readonly<IProps>, prevState: Readonly<IState>): any {
@@ -62,35 +70,38 @@ class UserClassComponent extends Component<IProps, IState> {
     // }
 
     handleClick = () => {
-        this.setState({count: this.state.count + 1})
+        this.setState({ count: this.state.count + 1 })
     }
 
     handleChange = (event: any) => {
-        this.setState({message: event.target.value})
+        this.setState({ message: event.target.value })
     }
 
-    sendDataToParentComponent = () => {
+    sendDataToParentComponent = (event) => {
+        event.preventDefault();
         this.props.changeMessage(this.state.message)
     }
 
     render() {
-        console.log('render');
+        console.log('render UserClassComponent');
         const { user } = this.props
         return(
-            <div style={{border: "solid 1px black"}}>
-                <div> UserClassComponent: name - {user.name} </div>
-                <div> кількість кліків: {this.state.count} </div>
-                <button onClick={this.handleClick}>
-                    click me
-                </button>
-                <input type="text"
-                       value={this.state.message}
-                       onChange={this.handleChange}
-                />
-                <button onClick={this.sendDataToParentComponent}>
-                    send
-                </button>
-            </div>
+          <div style={{border: "solid 1px black"}}>
+            <div> UserClassComponent: name - {user.name} </div>
+            <div> кількість кліків: {this.state.count} </div>
+            <button onClick={this.handleClick}>
+              click me
+            </button>
+            <form onSubmit={this.sendDataToParentComponent}>
+              <input type="text"
+                     value={this.state.message}
+                     onChange={this.handleChange}
+              />
+              <button type="submit">
+                send
+              </button>
+            </form>
+          </div>
         )
     }
 }

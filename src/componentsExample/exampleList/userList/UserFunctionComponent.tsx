@@ -12,19 +12,19 @@ const UserFunctionComponent = (props: IProps) => {
     const [count, setCount ] = useState<number>(0);
     const [message, setMessage ] = useState<string>('ddfdf');
 
-    useEffect(() => {
-        console.log('useEffect1',count);
-        document.title = `кількість кліків ${count}`;
-        return function (){
-            console.log('componentWillUnmount', count);
-        }
-        //
-    }, [count]);
-
-    useEffect(() => {
-        console.log('useEffect2', message);
-        //
-    }, [message]);
+    // useEffect(() => {
+    //     console.log('useEffect1',count);
+    //     document.title = `кількість кліків ${count}`;
+    //     return function (){
+    //         console.log('componentWillUnmount', count);
+    //     }
+    //     //
+    // }, [count]);
+    //
+    // useEffect(() => {
+    //     console.log('useEffect2', message);
+    //     //
+    // }, [message]);
 
     const increase = () => {
         setCount(count + 1);
@@ -37,7 +37,7 @@ const UserFunctionComponent = (props: IProps) => {
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setMessage(event.target.value);
     }
-    console.log('RENDER');
+    console.log('RENDER UserFunctionComponent');
     return (
         <div style={{border: "solid 1px black"}}>
             <div>UserFunctionalComponent</div>

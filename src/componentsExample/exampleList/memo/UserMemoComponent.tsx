@@ -23,19 +23,19 @@ const UserMemoComponent = (props: IProps) => {
     const [message, setMessage ] = useState<string>('ddfdf');
     // const [todos, setTodos ] = useState(['todo1', 'todo2']);
 
-    useEffect(() => {
-        console.log('useEffect1',count);
-        document.title = `кількість кліків ${count}`;
-        return function (){
-            console.log('componentWillUnmount', count);
-        }
-        //
-    }, [count]);
-
-    useEffect(() => {
-        console.log('useEffect2', message);
-        //
-    }, [message]);
+    // useEffect(() => {
+    //     console.log('useEffect1',count);
+    //     document.title = `кількість кліків ${count}`;
+    //     return function (){
+    //         console.log('componentWillUnmount', count);
+    //     }
+    //     //
+    // }, [count]);
+    //
+    // useEffect(() => {
+    //     console.log('useEffect2', message);
+    //     //
+    // }, [message]);
 
     const increase = () => {
         setCount(count + 1);

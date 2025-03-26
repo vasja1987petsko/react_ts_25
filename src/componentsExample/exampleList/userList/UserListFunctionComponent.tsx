@@ -21,7 +21,7 @@ const UserListFunctionComponent = () => {
     const updateMessage = (message: string): void => {
         setMessageFromChild(message);
     }
-
+    console.log('render UserListFunctionComponent');
     return (
         <div>
             <div> FunctionalUserList</div>
