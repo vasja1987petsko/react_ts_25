@@ -1,6 +1,5 @@
 import { useEffect, useState, memo} from "react";
 import { IUser } from "../../../interfaces/example/users";
-// import Todos from './Todos'
 
 interface IProps {
     user: IUser;

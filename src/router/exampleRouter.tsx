@@ -5,6 +5,8 @@ import UserListClassComponent from "../componentsExample/exampleList/userList/Us
 import UserListFunctionComponent from "../componentsExample/exampleList/userList/UserListFunctionComponent";
 
 import UserListMemoComponent from "../componentsExample/exampleList/memo/UserListMemoComponent";
+import UseMemoComponent from "../componentsExample/exampleList/useMemo/UseMemoComponent";
+import UseCallbackComponent from "../componentsExample/exampleList/useCallbackComponent/UseCallbackComponent.tsx";
 
 const Example1 = () =>  <div>Example1</div>;
 const Example2 = () =>  <div>Example2</div>;
@@ -29,6 +31,14 @@ const exampleRouter= [
     {
       path: "user-list-memo-component",
       element: <UserListMemoComponent />
+    },
+    {
+      path: "use-memo-component",
+      element: <UseMemoComponent />
+    },
+    {
+      path: "use-callback-component",
+      element: <UseCallbackComponent />
     },
     {
       path: "1",

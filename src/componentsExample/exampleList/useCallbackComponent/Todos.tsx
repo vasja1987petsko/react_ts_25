@@ -1,7 +1,7 @@
 import { memo } from 'react';
 interface ITodosProps {
   todos: string [];
-  addTodo?: () => void;
+  addTodo: () => void;
 }
 const Todos = ({ todos, addTodo }: ITodosProps ) => {
   console.log('render todos', todos);
