@@ -13,6 +13,8 @@ const UseCallbackComponent = () => {
     const [count, setCount ] = useState<number>(0);
     const [todos, setTodos ] = useState(['todo1', 'todo2']);
 
+    // const addTodo = () => setTodos((t) => [...t, 'newTodo']);
+
     const addTodo = useCallback(
       () => setTodos((t) => [...t, 'newTodo']),
       [todos]
@@ -23,6 +25,8 @@ const UseCallbackComponent = () => {
     };
 
     console.log('RENDER  UseCallbackComponent ');
+    console.log('count', count);
+    console.log('todos', todos);
     return (
       <div style={{border: "solid 1px black"}}>
           <Todos todos={todos} addTodo={addTodo}/>

@@ -4,7 +4,7 @@ interface ITodosProps {
   addTodo: () => void;
 }
 const Todos = ({ todos, addTodo }: ITodosProps ) => {
-  console.log('render todos', todos);
+  console.log('render Todos', todos);
   return(
     <div>
       {

@@ -1,10 +1,11 @@
 import { useMemo, useState } from "react";
 
 const expensiveCalculation = (num: number) => {
-  console.log('calculation');
+  console.log('calculation start');
   for(let i = 0; i < 1000000000; i++) {
     num  = num +1;
   }
+  console.log('calculation end');
   return num;
 }
 
@@ -15,6 +16,7 @@ const UseMemoComponent = () => {
 
     const addTodo =  () => setTodos((t) => [...t, 'newTodo']);
 
+    // const calculation = expensiveCalculation(count);
     const calculation = useMemo(() => expensiveCalculation(count), [count]);
 
     const increase = () => {
@@ -22,6 +24,9 @@ const UseMemoComponent = () => {
     };
 
     console.log('RENDER  UseMemoComponent');
+    console.log('count', count);
+    console.log('todos', todos);
+    console.log('calculation', calculation);
     return (
       <div style={{border: "solid 1px black"}}>
         {
