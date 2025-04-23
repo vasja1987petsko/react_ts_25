@@ -6,7 +6,13 @@ import UserListFunctionComponent from "../componentsExample/exampleList/userList
 
 import UserListMemoComponent from "../componentsExample/exampleList/memo/UserListMemoComponent";
 import UseMemoComponent from "../componentsExample/exampleList/useMemo/UseMemoComponent";
-import UseCallbackComponent from "../componentsExample/exampleList/useCallbackComponent/UseCallbackComponent.tsx";
+import UseCallbackComponent from "../componentsExample/exampleList/useCallbackComponent/UseCallbackComponent";
+
+import UseRefPreviousValueComponent from "../componentsExample/exampleList/useRef/UseRefPreviousValueComponent";
+import UseRefComponent from "../componentsExample/exampleList/useRef/UseRefComponent";
+
+import UseReducerComponent from "../componentsExample/exampleList/useReducer/UseReducerComponent";
+import UseReducerComponent1 from "../componentsExample/exampleList/useReducer/UseReducerComponent1";
 
 const Example1 = () =>  <div>Example1</div>;
 const Example2 = () =>  <div>Example2</div>;
@@ -39,6 +45,22 @@ const exampleRouter= [
     {
       path: "use-callback-component",
       element: <UseCallbackComponent />
+    },
+    {
+      path: "use-ref-component",
+      element: <UseRefComponent />
+    },
+    {
+      path: "use-ref-previous-value-component",
+      element: <UseRefPreviousValueComponent />
+    },
+    {
+      path: "use-reducer-component",
+      element: <UseReducerComponent />
+    },
+    {
+      path: "use-reducer-component1",
+      element: <UseReducerComponent1 />
     },
     {
       path: "1",
