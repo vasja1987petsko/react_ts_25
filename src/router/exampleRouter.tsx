@@ -60,7 +60,7 @@ const exampleRouter= [
     },
     {
       path: "use-reducer-component1",
-      element: <UseReducerComponent1 />
+      element: <UseReducerComponent1 initialValue={10} />
     },
     {
       path: "1",
