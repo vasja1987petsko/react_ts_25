@@ -1,6 +1,10 @@
-import { USERS } from '../actionTypes/users'
+import { USERS } from '../actionTypes/users';
+import { IUser } from "../../interfaces/users.ts";
+export interface IUsersState {
+  usersList: IUser[];
+}
 
-const initialState = {
+const initialState: IUsersState  = {
   usersList: [
     {
       id: 1,
@@ -9,7 +13,7 @@ const initialState = {
   ]
 }
 
-export default (state = initialState, action) => {
+export default (state: IUsersState  = initialState, action) => {
   switch (action.type) {
     case USERS.SET_USERS_LIST:
       return {

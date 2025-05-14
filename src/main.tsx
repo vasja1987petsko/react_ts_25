@@ -4,7 +4,8 @@ import './index.css'
 import App from './App.tsx'
 
 import { Provider } from 'react-redux';
-import store from './redux/store/createStore';
+// import store from './redux/store/createStore';
+import { store } from './store';
 
 
 createRoot(document.getElementById('root')!).render(

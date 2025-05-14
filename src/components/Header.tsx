@@ -13,6 +13,7 @@ const Header = () => {
           <Link to={'/'}> Home </Link>
           <Link to={'page1'}> Page1 </Link>
           <Link to={'users'}> Users</Link>
+          <Link to={'users-toolkit'}> UsersToolkit</Link>
           {/*<Link to={'page2'}> Page2 </Link>*/}
           <Link to={'examples'}> Examples </Link>
           {/*<Link to={'examples/other'}> examples/other </Link>*/}

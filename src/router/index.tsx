@@ -2,6 +2,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router';
 import Layout from "../components/Layout";
 import Users from "../pages/Users";
+import UsersToolkit from "../pages/UsersToolkit";
 import Example from "../componentsExample/Example";
 import exampleRouter from "./exampleRouter";
 //
@@ -36,6 +37,10 @@ const Router = () => {
         {
           path: "users",
           element: <Users />,
+        },
+        {
+          path: "users-toolkit",
+          element: <UsersToolkit />,
         },
       ]
     },
